@@ -12,6 +12,7 @@ package_charts:
     - chmod 700 get_helm.sh
     - ./get_helm.sh
     - git fetch origin "gl-pages"
+    - git remote set-url origin https://${CI_REGISTRY_USER}:${GITLAB_CI_TOKEN}@${CI_REPOSITORY_URL}
   script:
     - git checkout gl-pages
     - git checkout remotes/origin/development -- charts scripts .gitignore README.md
@@ -20,8 +21,8 @@ package_charts:
     - cd ..
     - rm -r charts scripts
     - helm repo index --url ${CI_PAGES_URL} ./public
-    - git config user.name "FreekO"
-    - git config user.email "electronics@amaze-escape.com"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - git config --global user.name "${GITLAB_USER_NAME}"
     - git add .
     - git commit -m "Publish Helm charts and additional files"
     - git push origin gl-pages
