@@ -1,0 +1,6 @@
+apiVersion: v2
+name: sdg-game
+description: Online escape room about sustainability
+type: application
+version: 0.0.1
+appVersion: "1.2.0-rc0"

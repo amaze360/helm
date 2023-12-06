@@ -1,5 +1,33 @@
+image: ubuntu:jammy
+
 stages:
+  - package
   - deploy
+
+package_charts:
+  stage: package
+  before_script: 
+    - apt-get update && apt-get install -y curl tar yq git
+    - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+    - chmod 700 get_helm.sh
+    - ./get_helm.sh
+    - git fetch origin development
+    - git fetch origin "gl-pages"
+  script:
+    - which yq || apt-get install yq -y
+    - git checkout gl-pages
+    - git checkout development -- charts scripts
+    - cd charts
+    - ../scripts/process-charts.sh
+    - cd ..
+    - helm repo index --url ${CI_PAGES_URL} ./public
+    - git config user.name "FreekO"
+    - git config user.email "electronics@amaze-escape.com"
+    - git add .
+    - git commit -m "Publish Helm charts and additional files"
+    - git push origin gl-pages
+  rules:
+    - if: $CI_COMMIT_BRANCH == "development"
 
 pages:
   stage: deploy
