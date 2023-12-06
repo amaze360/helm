@@ -14,12 +14,12 @@ package_charts:
     - git fetch origin development
     - git fetch origin "gl-pages"
   script:
-    - which yq || apt-get install yq -y
     - git checkout gl-pages
     - git checkout development -- charts scripts
     - cd charts
     - ../scripts/process-charts.sh
     - cd ..
+    - rm -r charts scripts
     - helm repo index --url ${CI_PAGES_URL} ./public
     - git config user.name "FreekO"
     - git config user.email "electronics@amaze-escape.com"
