@@ -14,9 +14,7 @@ package_charts:
     - git fetch origin "gl-pages"
   script:
     - git checkout gl-pages
-    - git fetch --all
-    - git branch -a
-    - git checkout development -- charts scripts
+    - git checkout remotes/origin/development -- charts scripts .gitignore README.md
     - cd charts
     - ../scripts/process-charts.sh
     - cd ..
