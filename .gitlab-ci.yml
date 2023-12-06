@@ -15,12 +15,12 @@ package_charts:
     - git remote set-url origin https://${GITLAB_USER_NAME}:${GITLAB_CI_TOKEN}@${CI_REPOSITORY_URL#*@}
   script:
     - git checkout gl-pages
-    - git checkout remotes/origin/development -- charts scripts .gitignore README.md
+    - git checkout remotes/origin/development -- charts scripts public/README.md .gitignore .gitlab-ci.yml
     - cd charts
     - ../scripts/process-charts.sh
     - cd ..
-    - rm -r charts scripts
     - helm repo index --url ${CI_PAGES_URL} ./public
+    - rm -r charts scripts get_helm.sh
     - git config --global user.email "${GITLAB_USER_EMAIL}"
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git add .
