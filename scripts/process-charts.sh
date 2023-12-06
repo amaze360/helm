@@ -7,8 +7,8 @@ for d in */ ; do
 
   image_tag=$(yq e '.image.tag' "$d/values.yaml") yq -i '.appVersion=env(image_tag)' "$d/Chart.yaml"   
 
-  if [ ! -f "../$chart_name-$chart_version.tgz" ]; then
-    helm package "$d" -d ..
+  if [ ! -f "../public/$chart_name-$chart_version.tgz" ]; then
+    helm package "$d" -d ../public
   else
     echo "Chart $chart_name-$chart_version already exists, skipping."
   fi
