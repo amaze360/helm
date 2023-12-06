@@ -7,7 +7,7 @@ stages:
 package_charts:
   stage: package
   before_script: 
-    - apt-get update && apt-get install -y curl tar yq git
+    - apt-get update -y && apt-get install -y curl tar yq git
     - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
     - chmod 700 get_helm.sh
     - ./get_helm.sh
