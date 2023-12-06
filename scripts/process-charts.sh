@@ -3,9 +3,7 @@
 # Loop through all chart directories
 for d in */ ; do
   chart_name=$(basename "$d")
-  chart_version=$(yq e '.version' "$d/Chart.yaml")
-
-  image_tag=$(yq e '.image.tag' "$d/values.yaml") yq -i '.appVersion=env(image_tag)' "$d/Chart.yaml"   
+  chart_version=$(grep 'version:' "$d/Chart.yaml" | awk '{ print $2 }')
 
   if [ ! -f "../public/$chart_name-$chart_version.tgz" ]; then
     helm package "$d" -d ../public
