@@ -1,4 +1,4 @@
-image: ubuntu:jammy
+image: ubuntu:22.04
 
 stages:
   - package
@@ -7,7 +7,7 @@ stages:
 package_charts:
   stage: package
   before_script: 
-    - apt-get update -y && apt-get install -y curl tar git
+    - apt-get update -y && apt-get install -y curl tar git yq
     - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
     - chmod 700 get_helm.sh
     - ./get_helm.sh
