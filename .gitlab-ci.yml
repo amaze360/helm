@@ -11,10 +11,10 @@ package_charts:
     - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
     - chmod 700 get_helm.sh
     - ./get_helm.sh
-    - git fetch origin development
     - git fetch origin "gl-pages"
   script:
     - git checkout gl-pages
+    - git fetch origin development
     - git checkout development -- charts scripts
     - cd charts
     - ../scripts/process-charts.sh
