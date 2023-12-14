@@ -15,7 +15,7 @@ package_charts:
     - git remote set-url origin https://${GITLAB_USER_NAME}:${GITLAB_CI_TOKEN}@${CI_REPOSITORY_URL#*@}
   script:
     - git checkout gl-pages
-    - git checkout remotes/origin/development -- charts scripts public/README.md .gitignore .gitlab-ci.yml
+    - git checkout remotes/origin/development -- charts scripts public/index.html .gitignore .gitlab-ci.yml
     - cd charts
     - ../scripts/process-charts.sh
     - cd ..
