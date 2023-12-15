@@ -68,7 +68,7 @@ persistence:
   panoramas:
     enabled: false
     # storageClass: "-"
-    # existingClaim: panorama-server-data
+    # existingClaim: panorama-server-panoramas
     accessMode: ReadWriteOnce
     size: 30Gi
     annotations: {}
