@@ -2,7 +2,7 @@
 {{- if not .Values.persistence.panoramas.existingClaim -}}
 kind: PersistentVolumeClaim
 apiVersion: v1
-metapanoramas:
+metadata:
   name: {{ template "panorama-server.fullname" . }}-panoramas
   labels:
     app.kubernetes.io/name: {{ include "panorama-server.name" . }}
