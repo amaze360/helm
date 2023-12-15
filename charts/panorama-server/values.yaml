@@ -69,8 +69,8 @@ persistence:
 livenessProbe:
   enabled: false
   initialDelaySeconds: 60
-  periodSeconds: 30
-  failureThreshold: 30
+  periodSeconds: 15
+  failureThreshold: 60
   successThreshold: 1
   timeoutSeconds: 5
 
