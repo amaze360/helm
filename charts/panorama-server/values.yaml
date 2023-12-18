@@ -79,8 +79,8 @@ livenessProbe:
 
 readinessProbe:
   enabled: true
-  initialDelaySeconds: 15
-  periodSeconds: 15
+  initialDelaySeconds: 5
+  periodSeconds: 10
   failureThreshold: 60
   successThreshold: 1
   timeoutSeconds: 5
@@ -90,7 +90,7 @@ strategy:
     maxSurge: 1        # Example: "25%" or 1
     maxUnavailable: 1  # Example: "25%" or 1
 
-minReadySeconds: 10
+minReadySeconds: 0
 
 serviceAccount:
   # Specifies whether a service account should be created
