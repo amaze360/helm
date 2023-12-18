@@ -51,7 +51,7 @@ spec:
             - name: panorama-server-data
               mountPath: /var/www/data
             - name: panorama-server-public
-              mountPath: /var/www/html/public
+              mountPath: /var/www/html
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
