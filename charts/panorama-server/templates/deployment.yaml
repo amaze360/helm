@@ -36,10 +36,10 @@ spec:
           persistentVolumeClaim:
             claimName: {{ if .Values.persistence.data.existingClaim }}{{ .Values.persistence.data.existingClaim }}{{- else }}{{ template "panorama-server.fullname" . }}-data{{- end }}
           {{- end }}
-        - name: panorama-server-public
-          {{- if .Values.persistence.public.enabled }}
+        - name: panorama-server-panoramas
+          {{- if .Values.persistence.panoramas.enabled }}
           persistentVolumeClaim:
-            claimName: {{ if .Values.persistence.public.existingClaim }}{{ .Values.persistence.public.existingClaim }}{{- else }}{{ template "panorama-server.fullname" . }}-public{{- end }}
+            claimName: {{ if .Values.persistence.panoramas.existingClaim }}{{ .Values.persistence.panoramas.existingClaim }}{{- else }}{{ template "panorama-server.fullname" . }}-panoramas{{- end }}
           {{- end }}
       containers:
         - name: {{ .Chart.Name }}
@@ -50,8 +50,8 @@ spec:
           volumeMounts:
             - name: panorama-server-data
               mountPath: /var/www/data
-            - name: panorama-server-public
-              mountPath: /var/www/html
+            - name: panorama-server-panoramas
+              mountPath: /var/www/html/panoramas
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
