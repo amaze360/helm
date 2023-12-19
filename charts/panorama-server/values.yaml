@@ -10,6 +10,10 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+args: []
+  # - --update-panoramas
+  # - --create-webps
+
 service:
   type: ClusterIP
   port: 80
