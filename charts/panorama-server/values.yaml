@@ -30,15 +30,14 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: {}
-  # If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
+resources:
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+  limits:
+    cpu: "4"
+    memory: "8Gi"
+
 
 autoscaling:
   enabled: false
