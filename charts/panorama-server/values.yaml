@@ -97,13 +97,13 @@ strategy:
 minReadySeconds: 0
 
 lifecycle:
-  postStart: []
+  postStart: {}
     # exec:
     #   command: 
     #     - "<command>"
     #     - "<arg1>"
     #     - "<arg2>"
-  preStop: []
+  preStop: {}
     # httpGet:
     #   path: /path/to/endpoint
     #   port: <port>
