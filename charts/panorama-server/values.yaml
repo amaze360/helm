@@ -10,7 +10,8 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-args: []
+args:
+  []
   # - --cleanup
   # - --update-panoramas
   # - --slice-images
@@ -22,7 +23,8 @@ service:
 ingress:
   enabled: false
   className: ""
-  annotations: {}
+  annotations:
+    {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
@@ -42,7 +44,6 @@ resources:
   limits:
     cpu: "4"
     memory: "8Gi"
-
 
 autoscaling:
   enabled: false
@@ -91,26 +92,24 @@ readinessProbe:
 
 strategy:
   rollingUpdate:
-    maxSurge: 1        # Example: "25%" or 1
-    maxUnavailable: 1  # Example: "25%" or 1
+    maxSurge: 1 # Example: "25%" or 1
+    maxUnavailable: 1 # Example: "25%" or 1
 
 minReadySeconds: 0
 
-lifecycle: {}
-  # postStart:
-  #   exec:
-  #     command: 
-  #       - "<command>"
-  #       - "<arg1>"
-  #       - "<arg2>"
-  # preStop:
-  #   httpGet:
-  #     path: /path/to/endpoint
-  #     port: <port>
-  #     httpHeaders:
-  #       - name: Custom-Header
-  #         value: Awesome
-# 
+# lifecycle:
+#   postStarCommand:
+#     - "<command>"
+#     - "<arg1>"
+#     - "<arg2>"
+#   preStopCommmand:
+#     httpGet:
+#       path: /path/to/endpoint
+#       port: <port>
+#       httpHeaders:
+#         - name: Custom-Header
+#           value: Awesome
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
