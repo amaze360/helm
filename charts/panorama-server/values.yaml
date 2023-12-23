@@ -96,20 +96,20 @@ strategy:
 
 minReadySeconds: 0
 
-lifecycle:
-  postStart: {}
-    # exec:
-    #   command: 
-    #     - "<command>"
-    #     - "<arg1>"
-    #     - "<arg2>"
-  preStop: {}
-    # httpGet:
-    #   path: /path/to/endpoint
-    #   port: <port>
-    #   httpHeaders:
-    #     - name: Custom-Header
-    #       value: Awesome
+lifecycle: {}
+  # postStart:
+  #   exec:
+  #     command: 
+  #       - "<command>"
+  #       - "<arg1>"
+  #       - "<arg2>"
+  # preStop:
+  #   httpGet:
+  #     path: /path/to/endpoint
+  #     port: <port>
+  #     httpHeaders:
+  #       - name: Custom-Header
+  #         value: Awesome
 # 
 serviceAccount:
   # Specifies whether a service account should be created
