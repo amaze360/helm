@@ -62,6 +62,8 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          lifecycle:
+            {{- toYaml .Values.lifecycle | nindent 12 }}
           {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             httpGet:

@@ -11,9 +11,9 @@ nameOverride: ""
 fullnameOverride: ""
 
 args: []
-  # - --delete-corrupted-images
+  # - --cleanup
   # - --update-panoramas
-  # - --create-webps
+  # - --slice-images
 
 service:
   type: ClusterIP
@@ -96,6 +96,21 @@ strategy:
 
 minReadySeconds: 0
 
+lifecycle:
+  postStart: []
+    # exec:
+    #   command: 
+    #     - "<command>"
+    #     - "<arg1>"
+    #     - "<arg2>"
+  preStop: []
+    # httpGet:
+    #   path: /path/to/endpoint
+    #   port: <port>
+    #   httpHeaders:
+    #     - name: Custom-Header
+    #       value: Awesome
+# 
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
