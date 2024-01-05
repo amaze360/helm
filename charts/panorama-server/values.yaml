@@ -1,9 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: registry.amaze360.nl/amaze360/panorama-server
+  repository: registry.amaze360.nl/amaze360
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
 imagePullSecrets: []
