@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: registry.amaze360.nl/amaze360
+  repository: registry.amaze360.nl/amaze360/panorama-server
   pullPolicy: IfNotPresent
   tag: ""
 
