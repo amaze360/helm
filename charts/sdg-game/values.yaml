@@ -9,7 +9,9 @@ image:
   pullPolicy: IfNotPresent
   tag: ""
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: gitlab-registry
+
 nameOverride: ""
 fullnameOverride: ""
 
