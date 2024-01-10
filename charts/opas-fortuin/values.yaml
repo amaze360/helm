@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: registry.amaze360.nl/amaze360/opas-fortuin
+  repository: registry.amaze360.nl/amaze360/the-cari-mysteries/opas-fortuin
   pullPolicy: IfNotPresent
   tag: ""
 
