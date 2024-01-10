@@ -2,5 +2,5 @@ apiVersion: v2
 name: opas-fortuin
 description: A 360 Adventure game about a family that moved from Indonesia to the Netherlands after WOII.
 type: application
-version: 0.0.1
+version: 0.0.2
 appVersion: "23"
