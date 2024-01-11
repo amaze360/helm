@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: registry.amaze360.nl/amaze360/sdg-game
+  repository: registry.amaze360.nl/amaze360/sdg-online/sdg-game
   pullPolicy: IfNotPresent
   tag: ""
 
