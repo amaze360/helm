@@ -120,7 +120,7 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchLabels:
-                app: {{ .Chart.Name }}
+                app.kubernetes.io/instance: {{ include "panorama-server.fullname" . }}
             topologyKey: "kubernetes.io/hostname"
         {{- end }}
         {{- if .Values.affinity }}
