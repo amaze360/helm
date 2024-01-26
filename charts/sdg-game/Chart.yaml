@@ -3,4 +3,4 @@ name: sdg-game
 description: Online escape room about sustainability
 type: application
 version: 0.0.4
-appVersion: "142"
+appVersion: "latest"
