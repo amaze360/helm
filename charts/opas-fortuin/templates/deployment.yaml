@@ -50,14 +50,15 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.volumeMounts }}
           volumeMounts:
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
-      {{- with .Values.volumes }}
+            - name: opas-fortuin-socials
+              mountPath: /var/www/html/socials
       volumes:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        - name: opas-fortuin-socials
+          {{- if .Values.persistence.socials.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ if .Values.persistence.socials.existingClaim }}{{ .Values.persistence.socials.existingClaim }}{{- else }}{{ template "opas-fortuin.fullname" . }}-socials{{- end }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

@@ -1,0 +1,31 @@
+{{- if .Values.persistence.socials.enabled -}}
+{{- if not .Values.persistence.socials.existingClaim -}}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metasocials:
+  name: {{ template "opas-fortuin.fullname" . }}-socials
+  labels:
+    app.kubernetes.io/name: {{ include "opas-fortuin.name" . }}
+    helm.sh/chart: {{ include "opas-fortuin.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: app
+{{- if .Values.persistence.socials.annotations }}
+  annotations:
+{{ toYaml .Values.persistence.socials.annotations | indent 4 }}
+{{- end }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.socials.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.socials.size | quote }}
+{{- if .Values.persistence.socials.storageClass }}
+{{- if (eq "-" .Values.persistence.socials.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.persistence.socials.storageClass }}"
+{{- end }}
+{{- end }}
+{{- end -}}
+{{- end -}}
