@@ -51,14 +51,15 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           args: {{ .Values.args | toYaml | nindent 12 }}
-          {{- with .Values.volumeMounts }}
           volumeMounts:
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
-      {{- with .Values.volumes }}
+            - name: sdg-game-socials
+              mountPath: /var/www/html/socials
       volumes:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        - name: sdg-game-socials
+          {{- if .Values.persistence.socials.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ if .Values.persistence.socials.existingClaim }}{{ .Values.persistence.socials.existingClaim }}{{- else }}{{ template "sdg-game.fullname" . }}-socials{{- end }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

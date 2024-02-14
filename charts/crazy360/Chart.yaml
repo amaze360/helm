@@ -2,5 +2,5 @@ apiVersion: v2
 name: crazy360
 description: An Amaze360 Hospital Themed 360 Game
 type: application
-version: 0.0.3
+version: 0.0.4
 appVersion: "latest"
