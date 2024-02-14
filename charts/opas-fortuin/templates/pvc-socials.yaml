@@ -2,7 +2,7 @@
 {{- if not .Values.persistence.socials.existingClaim -}}
 kind: PersistentVolumeClaim
 apiVersion: v1
-metasocials:
+metadata:
   name: {{ template "opas-fortuin.fullname" . }}-socials
   labels:
     app.kubernetes.io/name: {{ include "opas-fortuin.name" . }}
