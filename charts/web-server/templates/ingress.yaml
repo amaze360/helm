@@ -58,4 +58,32 @@ spec:
               {{- end }}
           {{- end }}
     {{- end }}
+    {{- if .Values.ingress.basicAuth.enabled -}}
+    ---
+    apiVersion: traefik.containo.us/v1alpha1
+    kind: Middleware
+    metadata:
+      name: {{ $fullName }}-basic-auth
+    spec:
+      basicAuth:
+        secret: {{ .Values.ingress.basicAuth.secret }}
+    ---
+    apiVersion: traefik.containo.us/v1alpha1
+    kind: IngressRoute
+    metadata:
+      name: {{ $fullName }}
+    spec:
+      entryPoints:
+        - websecure
+      routes:
+        - match: Host(`{{ .Values.ingress.basicAuth.host }}`)
+          kind: Rule
+          services:
+            - name: {{ $fullName }}
+              port: {{ $svcPort }}
+          middlewares:
+            - name: {{ $fullName }}-basic-auth
+      tls:                             
+        secretName: {{ .Values.ingress.basicAuth.tls.secretName }}
+        {{- end }}
 {{- end }}

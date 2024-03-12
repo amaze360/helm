@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: registry.amaze360.nl/amaze360/game-repo
+  repository: nginx
   pullPolicy: IfNotPresent
   tag: ""
 
@@ -56,6 +56,11 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
+  basicAuth:
+    enabled: false
+    host: chart-example.local
+    tls: 
+      secretName: chart-example-tls
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
