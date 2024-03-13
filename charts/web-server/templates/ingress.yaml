@@ -75,15 +75,19 @@ spec:
     spec:
       entryPoints:
         - websecure
+      {{ with index .Values.ingress.hosts 0 }}
       routes:
-        - match: Host(`{{ .Values.ingress.hosts[0].host }}`)
+        - match: Host(`{{ .host }}`)
           kind: Rule
           services:
             - name: {{ $fullName }}
               port: {{ $svcPort }}
           middlewares:
             - name: {{ $fullName }}-basic-auth
+      {{- end }}
+      {{ with index .Values.ingress.tls 0 }}
       tls:                             
-        secretName: {{ .Values.ingress.tls[0].secretName }}
-        {{- end }}
+        secretName: {{ .secretName }}
+      {{- end }}
+  {{- end }}
 {{- end }}
