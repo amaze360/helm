@@ -75,7 +75,7 @@ spec:
     spec:
       entryPoints:
         - websecure
-      {{ with index .Values.ingress.hosts 0 }}
+      {{- with index .Values.ingress.hosts 0 }}
       routes:
         - match: Host(`{{ .host }}`)
           kind: Rule
@@ -85,7 +85,7 @@ spec:
           middlewares:
             - name: {{ $fullName }}-basic-auth
       {{- end }}
-      {{ with index .Values.ingress.tls 0 }}
+      {{- with index .Values.ingress.tls 0 }}
       tls:                             
         secretName: {{ .secretName }}
       {{- end }}
