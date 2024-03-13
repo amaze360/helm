@@ -89,5 +89,5 @@ spec:
       tls:                             
         secretName: {{ .secretName }}
       {{- end }}
-  {{- end }}
+    {{- end }}
 {{- end }}
