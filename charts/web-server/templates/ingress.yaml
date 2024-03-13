@@ -58,7 +58,6 @@ spec:
               {{- end }}
           {{- end }}
     {{- end }}
-{{- end }}
 {{- if .Values.ingress.basicAuth.enabled -}}
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -90,4 +89,5 @@ spec:
   tls:                             
     secretName: {{ .secretName }}
   {{- end }}
+{{- end }}
 {{- end }}
