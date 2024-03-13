@@ -53,9 +53,6 @@ ingress:
   #      - chart-example.local
   basicAuth:
     enabled: false
-    host: chart-example.local
-    tls: 
-      secretName: chart-example-tls
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
