@@ -1,5 +1,5 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "web-server.fullname" . -}}
+{{- $fullName := include "pages360.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 {{- if and .Values.ingress.className (not (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion)) }}
   {{- if not (hasKey .Values.ingress.annotations "kubernetes.io/ingress.class") }}
@@ -17,7 +17,7 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    {{- include "web-server.labels" . | nindent 4 }}
+    {{- include "pages360.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
@@ -60,7 +60,7 @@ spec:
     {{- end }}
 {{- end }}
 {{- if .Values.basicAuth.enabled -}}
-{{- $fullName := include "web-server.fullname" . -}}
+{{- $fullName := include "pages360.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 ---
 apiVersion: traefik.containo.us/v1alpha1
