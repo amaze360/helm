@@ -1,3 +1,38 @@
+{{- if .Values.basicAuth.enabled -}}
+{{- $fullName := include "web-server.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: {{ $fullName }}-basic-auth
+spec:
+  basicAuth:
+    secret: {{ $fullName }}-basic-auth
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ $fullName }}
+spec:
+  entryPoints:
+    - websecure
+  {{- with index .Values.ingress.hosts 0 }}
+  routes:
+    - match: Host(`{{ .host }}`)
+      kind: Rule
+      services:
+        - name: {{ $fullName }}
+          port: {{ $svcPort }}
+      middlewares:
+        - name: {{ $fullName }}-basic-auth
+  {{- end }}
+  {{- with index .Values.ingress.tls 0 }}
+  tls:                             
+    secretName: {{ .secretName }}
+  {{- end }}
+{{- end }}
+---
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "web-server.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
@@ -58,36 +93,4 @@ spec:
               {{- end }}
           {{- end }}
     {{- end }}
-{{- if .Values.ingress.basicAuth.enabled -}}
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: {{ $fullName }}-basic-auth
-spec:
-  basicAuth:
-    secret: {{ .Values.ingress.basicAuth.secret }}
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: {{ $fullName }}
-spec:
-  entryPoints:
-    - websecure
-  {{- with index .Values.ingress.hosts 0 }}
-  routes:
-    - match: Host(`{{ .host }}`)
-      kind: Rule
-      services:
-        - name: {{ $fullName }}
-          port: {{ $svcPort }}
-      middlewares:
-        - name: {{ $fullName }}-basic-auth
-  {{- end }}
-  {{- with index .Values.ingress.tls 0 }}
-  tls:                             
-    secretName: {{ .secretName }}
-  {{- end }}
-{{- end }}
 {{- end }}
