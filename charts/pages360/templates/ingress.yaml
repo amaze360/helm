@@ -1,4 +1,4 @@
-{{- if .Values.ingress.enabled -}}
+{{- if .Values.ingress.enabled (not .Values.ingress.basicAuth.enabled) -}}
 {{- $fullName := include "pages360.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 {{- if and .Values.ingress.className (not (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion)) }}
@@ -59,7 +59,7 @@ spec:
           {{- end }}
     {{- end }}
 {{- end }}
-{{- if .Values.basicAuth.enabled -}}
+{{- if .Values.ingress.basicAuth.enabled -}}
 {{- $fullName := include "pages360.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 ---
