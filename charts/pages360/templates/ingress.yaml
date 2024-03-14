@@ -31,6 +31,27 @@ spec:
   tls:                             
     secretName: {{ .secretName }}
   {{- end }}
+---
+{{- $host := "" }}
+{{- $secretName := "" }}
+{{- with index .Values.ingress.hosts 0 }}
+{{- $host = .host -}}
+{{- end -}}
+{{- with index .Values.ingress.tls 0 }}
+{{- $secretName = .secretName -}}
+{{- end -}}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ $host }}
+spec:
+  secretName: {{ $secretName }}
+  commonName: {{ $host }}
+  dnsNames:
+  - {{ $host }}
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
 {{- else if .Values.ingress.enabled -}}
 {{- $fullName := include "pages360.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
