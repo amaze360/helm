@@ -1,6 +1,14 @@
 {{- if .Values.ingress.basicAuth.enabled -}}
 {{- $fullName := include "pages360.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
+{{- $host := "" }}
+{{- $secretName := "" }}
+{{- with index .Values.ingress.hosts 0 }}
+{{- $host = .host -}}
+{{- end -}}
+{{- with index .Values.ingress.tls 0 }}
+{{- $secretName = .secretName -}}
+{{- end -}}
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
@@ -17,29 +25,17 @@ metadata:
 spec:
   entryPoints:
     - websecure
-  {{- with index .Values.ingress.hosts 0 }}
   routes:
-    - match: Host(`{{ .host }}`)
+    - match: Host(`{{ $host }}`)
       kind: Rule
       services:
         - name: {{ $fullName }}
           port: {{ $svcPort }}
       middlewares:
         - name: {{ $fullName }}-basic-auth
-  {{- end }}
-  {{- with index .Values.ingress.tls 0 }}
   tls:                             
-    secretName: {{ .secretName }}
-  {{- end }}
+    secretName: {{ $secretName }}
 ---
-{{- $host := "" }}
-{{- $secretName := "" }}
-{{- with index .Values.ingress.hosts 0 }}
-{{- $host = .host -}}
-{{- end -}}
-{{- with index .Values.ingress.tls 0 }}
-{{- $secretName = .secretName -}}
-{{- end -}}
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
