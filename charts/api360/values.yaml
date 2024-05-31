@@ -5,9 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: registry.amaze360.nl/amaze360/socketio
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
 imagePullSecrets: []
@@ -41,7 +40,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 9000
 
 ingress:
   enabled: false
@@ -58,6 +57,13 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
+
+nginx:
+  enabled: true
+  image: nginx:latest
+
+mysql:
+  enabled: true
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
