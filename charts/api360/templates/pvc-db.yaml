@@ -1,0 +1,31 @@
+{{- if .Values.persistence.db.enabled -}}
+{{- if not .Values.persistence.db.existingClaim -}}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "api360.fullname" . }}-db
+  labels:
+    app.kubernetes.io/name: {{ include "api360.name" . }}
+    helm.sh/chart: {{ include "api360.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: app
+{{- if .Values.persistence.db.annotations }}
+  annotations:
+{{ toYaml .Values.persistence.db.annotations | indent 4 }}
+{{- end }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.db.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.db.size | quote }}
+{{- if .Values.persistence.db.storageClass }}
+{{- if (eq "-" .Values.persistence.db.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.persistence.db.storageClass }}"
+{{- end }}
+{{- end }}
+{{- end -}}
+{{- end -}}
