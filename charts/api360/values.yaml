@@ -59,13 +59,14 @@ mysql:
   rootPassword: "rootpassword"
   user: "myuser"
   password: "mypassword"
-  persistence:
-    enabled: false
-    # storageClass: "-"
-    # existingClaim: api360-mysql
-    accessMode: ReadWriteOnce
-    size: 10Gi
-    annotations: {}
+  primary:
+    persistence:
+      enabled: false
+      # storageClass: "-"
+      # existingClaim: api360-mysql
+      accessMode: ReadWriteOnce
+      size: 10Gi
+      annotations: {}
 
 
 resources: {}
