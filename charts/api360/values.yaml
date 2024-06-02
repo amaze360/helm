@@ -58,9 +58,11 @@ nginx:
 
 mysql:
   enabled: true
-  rootPassword: "rootpassword"
-  user: "myuser"
-  password: "mypassword"
+  auth:
+    rootPassword: "rootpassword"
+    username: "myuser"
+    password: "mypassword"
+    database: my_database
   primary:
     persistence:
       enabled: false
