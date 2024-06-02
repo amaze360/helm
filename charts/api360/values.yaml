@@ -15,6 +15,15 @@ serviceAccount:
   annotations: {}
   name: ""
 
+persistence:
+  jwt-keys:
+    enabled: false
+    # storageClass: "-"
+    # existingClaim: api360-jwt-keys
+    accessMode: ReadWriteOnce
+    size: 1Gi
+    annotations: {}
+
 podAnnotations: {}
 podLabels: {}
 
@@ -45,22 +54,17 @@ nginx:
 
 mysql:
   enabled: true
-
-persistence:
-  jwt-keys:
-    enabled: false
-    # storageClass: "-"
-    # existingClaim: api360-jwt-keys
-    accessMode: ReadWriteOnce
-    size: 1Gi
-    annotations: {}
-  mysql:
+  rootPassword: "rootpassword"
+  user: "myuser"
+  password: "mypassword"
+  persistence:
     enabled: false
     # storageClass: "-"
     # existingClaim: api360-mysql
     accessMode: ReadWriteOnce
     size: 10Gi
     annotations: {}
+
 
 resources: {}
 

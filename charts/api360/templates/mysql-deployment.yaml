@@ -22,7 +22,7 @@ spec:
               mountPath: /var/lib/mysql
       volumes:
         - name: api360-mysql
-          {{- if .Values.persistence.mysql.enabled }}
+          {{- if .Values.mysql.persistence.enabled }}
           persistentVolumeClaim:
-            claimName: {{ if .Values.persistence.mysql.existingClaim }}{{ .Values.persistence.mysql.existingClaim }}{{- else }}{{ template "api360.fullname" . }}-mysql{{- end }}
+            claimName: {{ if .Values.mysql.persistence.existingClaim }}{{ .Values.mysql.persistence.existingClaim }}{{- else }}{{ template "api360.fullname" . }}-mysql{{- end }}
           {{- end }}
