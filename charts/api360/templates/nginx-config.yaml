@@ -1,50 +1,33 @@
-{{- define "default.conf" }}
-    upstream php-fpm {
-    server {{ include "api360.fullname" . }}:9000;
-}
-
-server {
-    listen 80;
-    server_name _;
-
-    root /var/www/public;
-
-    index index.php index.html index.htm;
-
-    location / {
-        try_files $uri /index.php$is_args$args;
-    }
-
-    location ~ \.php$ {
-        include fastcgi_params;
-        fastcgi_pass php-fpm;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    }
-
-    location ~ /\.ht {
-        deny all;
-    }
-}
-{{- end }}
-
-{{- if .Values.nginx.enabled -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ include "api360.fullname" . }}-nginx-config
-  labels:
-    app.kubernetes.io/name: {{ include "api360.name" . }}
-    helm.sh/chart: {{ include "api360.chart" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
-    app.kubernetes.io/managed-by: {{ .Release.Service }}
 data:
-  {{- if .Values.nginx.config.default }}
-  default.conf: |-
-    {{- template "default.conf" $ }}
-  {{- end }}
-  {{- if .Values.nginx.config.custom }}
-  zz-custom.conf: |-
-{{ .Values.nginx.config.custom | indent 4 }}
-  {{- end }}
-{{- end }}
+  default.conf: |
+    upstream php-fpm {
+        server {{ include "api360.fullname" . }}:9000;
+    }
+
+    server {
+        listen 80;
+        server_name _;
+
+        root /var/www/public;
+
+        index index.php index.html index.htm;
+
+        location / {
+            try_files $uri /index.php$is_args$args;
+        }
+
+        location ~ \.php$ {
+            include fastcgi_params;
+            fastcgi_pass php-fpm;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        }
+
+        location ~ /\.ht {
+            deny all;
+        }
+    }
