@@ -7,7 +7,7 @@ image:
 
 imagePullSecrets:
   - name: gitlab-registry
-  
+
 nameOverride: ""
 fullnameOverride: ""
 
@@ -74,10 +74,12 @@ mysql:
 resources: {}
 
 livenessProbe:
+  enabled: true
   httpGet:
     path: /
     port: http
 readinessProbe:
+  enabled: true
   httpGet:
     path: /
     port: http
