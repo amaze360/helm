@@ -74,12 +74,12 @@ mysql:
 resources: {}
 
 livenessProbe:
-  enabled: true
+  enabled: false
   httpGet:
     path: /
     port: http
 readinessProbe:
-  enabled: true
+  enabled: false
   httpGet:
     path: /
     port: http

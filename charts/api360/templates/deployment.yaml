@@ -43,13 +43,13 @@ spec:
           {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
-           {{- if .Values.readinessProbe.enabled }}
           {{- end }}
+           {{- if .Values.readinessProbe.enabled }}
           readinessProbe:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- end }}
           volumeMounts:
             - name: api360-jwt-keys
               mountPath: /var/www/config/jwt
