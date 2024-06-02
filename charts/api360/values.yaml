@@ -46,6 +46,22 @@ nginx:
 mysql:
   enabled: true
 
+persistence:
+  jwt-keys:
+    enabled: false
+    # storageClass: "-"
+    # existingClaim: api360-jwt-keys
+    accessMode: ReadWriteOnce
+    size: 1Gi
+    annotations: {}
+  mysql:
+    enabled: false
+    # storageClass: "-"
+    # existingClaim: api360-mysql
+    accessMode: ReadWriteOnce
+    size: 10Gi
+    annotations: {}
+
 resources: {}
 
 livenessProbe:

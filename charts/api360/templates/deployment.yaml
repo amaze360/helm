@@ -48,12 +48,14 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
-      {{- with .Values.volumes }}
+            - name: api360-jwt-keys
+              mountPath: /var/www/config/jwt
       volumes:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        - name: api360-jwt-keys
+          {{- if .Values.persistence.jwt-keys.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ if .Values.persistence.jwt-keys.existingClaim }}{{ .Values.persistence.jwt-keys.existingClaim }}{{- else }}{{ template "api360.fullname" . }}-jwt-keys{{- end }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
