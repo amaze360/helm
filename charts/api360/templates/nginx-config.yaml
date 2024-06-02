@@ -1,6 +1,6 @@
 {{- define "default.conf" }}
     upstream php-fpm {
-    server app:9000;
+    server {{ include "api360.fullname" . }}:9000;
 }
 
 server {

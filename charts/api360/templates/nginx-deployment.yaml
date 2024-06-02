@@ -18,14 +18,10 @@ spec:
           ports:
             - containerPort: 80
           volumeMounts:
-            - name: app-code
-              mountPath: /var/www
             - name: nginx-config
               mountPath: /etc/nginx/conf.d
               subPath: default.conf
       volumes:
-        - name: app-code
-          emptyDir: {}
         - name: nginx-config
           configMap:
             name: {{ include "api360.fullname" . }}-nginx-config
