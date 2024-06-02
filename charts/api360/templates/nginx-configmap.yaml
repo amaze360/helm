@@ -32,7 +32,7 @@ server {
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "api360.fullname" . }}-nginx-config
+  name: {{ include "api360.fullname" . }}-nginx-config
   labels:
     app.kubernetes.io/name: {{ include "api360.name" . }}
     helm.sh/chart: {{ include "api360.chart" . }}
