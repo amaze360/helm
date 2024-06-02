@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: {{ include "api360.fullname" . }}-nginx-config
 data:
-  nginx.conf: |
+  default.conf: |
     upstream php-fpm {
         server {{ include "api360.fullname" . }}:9000;
     }
