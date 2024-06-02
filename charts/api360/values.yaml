@@ -51,6 +51,8 @@ ingress:
 nginx:
   enabled: true
   image: nginx:latest
+  config:
+    custom: {}
 
 mysql:
   enabled: true
