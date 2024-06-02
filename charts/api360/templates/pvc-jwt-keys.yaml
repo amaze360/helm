@@ -1,5 +1,5 @@
-{{- if .Values.persistence.jwt-keys.enabled -}}
-{{- if not .Values.persistence.jwt-keys.existingClaim -}}
+{{- if .Values.persistence.jwtKeys.enabled -}}
+{{- if not .Values.persistence.jwtKeys.existingClaim -}}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -10,21 +10,21 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
     app.kubernetes.io/component: app
-{{- if .Values.persistence.jwt-keys.annotations }}
+{{- if .Values.persistence.jwtKeys.annotations }}
   annotations:
-{{ toYaml .Values.persistence.jwt-keys.annotations | indent 4 }}
+{{ toYaml .Values.persistence.jwtKeys.annotations | indent 4 }}
 {{- end }}
 spec:
   accessModes:
-    - {{ .Values.persistence.jwt-keys.accessMode | quote }}
+    - {{ .Values.persistence.jwtKeys.accessMode | quote }}
   resources:
     requests:
-      storage: {{ .Values.persistence.jwt-keys.size | quote }}
-{{- if .Values.persistence.jwt-keys.storageClass }}
-{{- if (eq "-" .Values.persistence.jwt-keys.storageClass) }}
+      storage: {{ .Values.persistence.jwtKeys.size | quote }}
+{{- if .Values.persistence.jwtKeys.storageClass }}
+{{- if (eq "-" .Values.persistence.jwtKeys.storageClass) }}
   storageClassName: ""
 {{- else }}
-  storageClassName: "{{ .Values.persistence.jwt-keys.storageClass }}"
+  storageClassName: "{{ .Values.persistence.jwtKeys.storageClass }}"
 {{- end }}
 {{- end }}
 {{- end -}}

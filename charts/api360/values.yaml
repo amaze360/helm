@@ -16,7 +16,7 @@ serviceAccount:
   name: ""
 
 persistence:
-  jwt-keys:
+  jwtKeys:
     enabled: false
     # storageClass: "-"
     # existingClaim: api360-jwt-keys

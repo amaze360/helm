@@ -52,9 +52,9 @@ spec:
               mountPath: /var/www/config/jwt
       volumes:
         - name: api360-jwt-keys
-          {{- if .Values.persistence.jwt-keys.enabled }}
+          {{- if .Values.persistence.jwtKeys.enabled }}
           persistentVolumeClaim:
-            claimName: {{ if .Values.persistence.jwt-keys.existingClaim }}{{ .Values.persistence.jwt-keys.existingClaim }}{{- else }}{{ template "api360.fullname" . }}-jwt-keys{{- end }}
+            claimName: {{ if .Values.persistence.jwtKeys.existingClaim }}{{ .Values.persistence.jwtKeys.existingClaim }}{{- else }}{{ template "api360.fullname" . }}-jwt-keys{{- end }}
           {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
