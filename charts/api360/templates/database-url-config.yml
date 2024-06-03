@@ -4,4 +4,4 @@ kind: ConfigMap
 metadata:
   name: {{ include "api360.fullname" . }}-database-url-config
 data:
-  DATABASE_URL: "mysql://$(MYSQL_USER):$(MYSQL_PASSWORD)@{{ include "api360.fullname" . }}-mysql:3306/{{ .Values.mysql.auth.database }}"
+  DATABASE_URL: "mysql://{{ .Values.mysql.auth.username }}:$(MYSQL_PASSWORD)@{{ include "api360.fullname" . }}-mysql:3306/{{ .Values.mysql.auth.database }}"

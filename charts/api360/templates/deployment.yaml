@@ -51,6 +51,11 @@ spec:
                 secretKeyRef:
                   name: api360-app
                   key: jwt-passphrase
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: api360-mysql
+                  key: mysql-password
             - name: DATABASE_URL
               valueFrom:
                 configMapKeyRef:
