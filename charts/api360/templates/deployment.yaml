@@ -58,6 +58,8 @@ spec:
                   key: mysql-password
             - name: DATABASE_URL
               value: "mysql://{{ .Values.mysql.auth.username }}:$(MYSQL_PASSWORD)@{{ include "api360.fullname" . }}-mysql:3306/{{ .Values.mysql.auth.database }}"
+            - name: CORS_ALLOW_ORIGIN
+              value: "*"
           {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
