@@ -53,6 +53,9 @@ ingress:
 nginx:
   enabled: true
   image: nginx:latest
+  service:
+    ports: 
+      http: 80
   config:
     custom: {}
 
