@@ -1,0 +1,7 @@
+# templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "api360.fullname" . }}-database-url-config
+data:
+  DATABASE_URL: "mysql://$(MYSQL_USER):$(MYSQL_PASSWORD)@{{ include "api360.fullname" . }}-mysql:3306/{{ .Values.mysql.auth.database }}"

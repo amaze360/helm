@@ -40,6 +40,22 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: APP_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: api360-app
+                  key: app-secret
+            - name: JWT_PASSPHRASE
+              valueFrom:
+                secretKeyRef:
+                  name: api360-app
+                  key: jwt-passphrase
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "api360.fullname" . }}-database-url-config
+                  key: DATABASE_URL
           {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
