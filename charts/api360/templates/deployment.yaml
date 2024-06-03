@@ -44,23 +44,20 @@ spec:
             - name: APP_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: api360-app
+                  name: {{ include "api360.fullname" . }}-app
                   key: app-secret
             - name: JWT_PASSPHRASE
               valueFrom:
                 secretKeyRef:
-                  name: api360-app
+                  name: {{ include "api360.fullname" . }}-app
                   key: jwt-passphrase
             - name: MYSQL_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: api360-mysql
+                  name: {{ include "api360.fullname" . }}-mysql
                   key: mysql-password
             - name: DATABASE_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ include "api360.fullname" . }}-database-url-config
-                  key: DATABASE_URL
+              value: "mysql://{{ .Values.mysql.auth.username }}:$(MYSQL_PASSWORD)@{{ include "api360.fullname" . }}-mysql:3306/{{ .Values.mysql.auth.database }}"
           {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
