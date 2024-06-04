@@ -31,7 +31,7 @@ package_charts:
     - cd charts
     - ../scripts/process-charts.sh
     - cd ..
-    - helm repo index --url ${CI_PAGES_URL} ./public
+    - helm repo index --url https://helm.services.amaze360.nl ./public
     - rm -r charts scripts get_helm.sh
     - git config --global user.email "${GITLAB_USER_EMAIL}"
     - git config --global user.name "${GITLAB_USER_NAME}"
