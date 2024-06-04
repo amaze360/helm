@@ -3,6 +3,8 @@ image: ubuntu:22.04
 variables:
   PAGES_HELM_CHART_VERSION: "0.0.5"
   PAGES_URL: "helm.services.amaze360.nl"
+  PAGES_KUBE_CONTEXT: "amaze360/infrastructure/kubernetes:amaze360"
+  PAGES_NAMESPACE: "amaze360"
 
 stages:
   - package
