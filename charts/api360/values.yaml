@@ -8,6 +8,10 @@ image:
 imagePullSecrets:
   - name: gitlab-registry
 
+secrets:
+  appSecret: "your_app_secret_here"
+  jwtPassphrase: "your_jwt_key_here"
+
 nameOverride: ""
 fullnameOverride: ""
 
@@ -40,7 +44,8 @@ service:
 ingress:
   enabled: false
   className: ""
-  annotations: {}
+  annotations:
+    {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
@@ -54,7 +59,7 @@ nginx:
   enabled: true
   image: nginx:latest
   service:
-    ports: 
+    ports:
       http: 80
   config:
     custom: {}
@@ -74,7 +79,6 @@ mysql:
       accessMode: ReadWriteOnce
       size: 10Gi
       annotations: {}
-
 
 resources: {}
 
