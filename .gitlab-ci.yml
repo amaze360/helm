@@ -4,11 +4,12 @@ image: ubuntu:22.04
 
 stages:
   - package
-  - deploy
   - publish
+  - deploy
 
 include:
   - "https://git.amaze360.nl/templates/devops-templates/-/raw/development/ci/publish-apache-server.yml"
+  - "https://git.amaze360.nl/templates/devops-templates/-/raw/development/ci/deploy-app.yml"
 
 package_charts:
   stage: package
