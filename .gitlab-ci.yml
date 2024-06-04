@@ -5,6 +5,7 @@ variables:
   PAGES_URL: "helm.services.amaze360.nl"
   PAGES_KUBE_CONTEXT: "amaze360/infrastructure/kubernetes:amaze360"
   PAGES_NAMESPACE: "amaze360"
+  PAGES_BASIC_AUTH: "false"
 
 stages:
   - package
