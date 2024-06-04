@@ -1,8 +1,14 @@
 image: ubuntu:22.04
 
+
+
 stages:
   - package
   - deploy
+  - publish
+
+include:
+  - "https://git.amaze360.nl/templates/devops-templates/-/raw/development/ci/publish-apache-server.yml"
 
 package_charts:
   stage: package
@@ -11,10 +17,10 @@ package_charts:
     - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
     - chmod 700 get_helm.sh
     - ./get_helm.sh
-    - git fetch origin "gl-pages"
+    - git fetch origin "pages360"
     - git remote set-url origin https://${GITLAB_USER_NAME}:${GITLAB_CI_TOKEN}@${CI_REPOSITORY_URL#*@}
   script:
-    - git checkout gl-pages
+    - git checkout pages360
     - git checkout remotes/origin/development -- charts scripts public/index.html .gitignore .gitlab-ci.yml
     - cd charts
     - ../scripts/process-charts.sh
@@ -25,7 +31,7 @@ package_charts:
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git add .
     - git commit -m "Publish Helm charts and additional files"
-    - git push origin gl-pages
+    - git push origin pages360
   rules:
     - if: $CI_COMMIT_BRANCH == "development"
 
@@ -39,4 +45,4 @@ pages:
     paths:
     - public
   rules:
-    - if: $CI_COMMIT_BRANCH == "gl-pages"
+    - if: $CI_COMMIT_BRANCH == "pages360"
