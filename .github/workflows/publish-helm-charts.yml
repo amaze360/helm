@@ -34,7 +34,7 @@ jobs:
           git checkout gh-pages
           # Fetch existing charts information
           helm repo index . --merge index.yaml
-          git checkout main -- charts
+          git checkout development -- charts
           cd charts
           for dir in */ ; do
             chart_name=$(basename "$dir")
@@ -53,7 +53,7 @@ jobs:
       - name: Copy Artifact Hub and README files
         run: |
           git checkout gh-pages
-          git checkout main -- icons artifacthub-repo.yml README.md .gitignore
+          git checkout development -- icons artifacthub-repo.yml README.md .gitignore
 
       - name: Publish Charts to GitHub Pages
         run: |
