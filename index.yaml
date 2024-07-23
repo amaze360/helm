@@ -1,0 +1,119 @@
+apiVersion: v1
+entries:
+  admin360:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.68388047Z"
+    description: A Helm chart for Kubernetes
+    digest: 76aa3e9680ba17e28088f1075f545a4ae822b9c3f35fa6903cb1f76fc3e316a6
+    name: admin360
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/admin360-0.0.2.tgz
+    version: 0.0.2
+  api360:
+  - apiVersion: v2
+    appVersion: "12"
+    created: "2024-07-23T15:28:50.687497377Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.1.*
+    description: A Helm chart for Kubernetes
+    digest: 69c0536b5da2ae8c0bd37cbfa90c78f4ce999e642159945d296854a7fd8c299d
+    name: api360
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/api360-0.1.3.tgz
+    version: 0.1.3
+  crazy360:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.688060583Z"
+    description: An Amaze360 Hospital Themed 360 Game
+    digest: 4b13907e2420103b1f432b8a536423988b28e91bcbbb94ed8071ebc261dedbff
+    name: crazy360
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/crazy360-0.0.4.tgz
+    version: 0.0.4
+  game-repo:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.688416399Z"
+    description: A Helm chart for Kubernetes
+    digest: 4dc7e528bfeb7cb96f64af958342a372d59e1a98d9860cc8cac1f242bef17590
+    name: game-repo
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/game-repo-0.0.1.tgz
+    version: 0.0.1
+  opas-fortuin:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.689214836Z"
+    description: A 360 Adventure game about a family that moved from TThe Dutch East
+      Indies to the Netherlands after WOII.
+    digest: ce2ffb69cda9963779e5e7627b6410695edd09ab2df600765e021b972e7511b6
+    name: opas-fortuin
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/opas-fortuin-0.0.4.tgz
+    version: 0.0.4
+  pages360:
+  - apiVersion: v2
+    appVersion: pages360
+    created: "2024-07-23T15:28:50.690109845Z"
+    description: A Helm chart for Kubernetes
+    digest: 0c39e7c2e6552a7967899bf81464e7f835e723586d09a95472232373c77b7cbe
+    name: pages360
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/pages360-0.0.5.tgz
+    version: 0.0.5
+  panorama-server:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.690609791Z"
+    description: Creates and serves 360 panoramas
+    digest: 1d64567606898810f34054d6bfe511b564da953dc6eb0ae500c3780647e64ef5
+    name: panorama-server
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/panorama-server-0.1.13.tgz
+    version: 0.1.13
+  portal360:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.69095039Z"
+    description: A Helm chart for Kubernetes
+    digest: 15e2e411d9980f4adaaa1847426c94b308a551c3b8d5e6e0010da89138ce2864
+    name: portal360
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/portal360-0.0.1.tgz
+    version: 0.0.1
+  sdg-game:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.691359226Z"
+    description: Online escape room about sustainability
+    digest: f8b01e48192f73f196eec050e2c378ca0604762b15b2bba079c66e748556fde5
+    name: sdg-game
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/sdg-game-0.0.5.tgz
+    version: 0.0.5
+  socketio:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-07-23T15:28:50.691701387Z"
+    description: A Helm chart for Kubernetes
+    digest: fabb5178fa534b0e666490e75a057bfdc41db27fc181d64cda39c6b94593ad86
+    name: socketio
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/socketio-0.0.2.tgz
+    version: 0.0.2
+generated: "2024-07-23T15:28:50.683370394Z"
