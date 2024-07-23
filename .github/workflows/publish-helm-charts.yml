@@ -43,6 +43,9 @@ jobs:
               echo "Chart $chart_name version $chart_version already exists, skipping."
             else
               echo "Packaging new or updated chart $chart_name version $chart_version."
+              cd "$dir"
+              helm dependency update
+              cd ..
               helm package "$dir" -d ..
             fi
           done
