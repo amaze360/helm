@@ -1,6 +1,0 @@
-apiVersion: v2
-name: opas-fortuin
-description: A 360 Adventure game about a family that moved from TThe Dutch East Indies to the Netherlands after WOII.
-type: application
-version: 0.0.4
-appVersion: "latest"
