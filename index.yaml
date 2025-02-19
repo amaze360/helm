@@ -3,7 +3,7 @@ entries:
   admin360:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.132512703Z"
+    created: "2025-02-19T10:46:10.338154098Z"
     description: A Helm chart for Kubernetes
     digest: 1518a4edff424dc7e8bbf9cefc208da44d945a2fa7a100a1bca75919bd147854
     name: admin360
@@ -13,7 +13,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: "19"
-    created: "2025-02-19T10:26:48.132152146Z"
+    created: "2025-02-19T10:46:10.337721276Z"
     description: A Helm chart for Kubernetes
     digest: 2022c61108815e8fb30f0e2c4eedad6edf443f184737b59be7517bd7a4756e1f
     name: admin360
@@ -24,7 +24,7 @@ entries:
   api360:
   - apiVersion: v2
     appVersion: "12"
-    created: "2025-02-19T10:26:48.141145568Z"
+    created: "2025-02-19T10:46:10.346955043Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -39,7 +39,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: "12"
-    created: "2025-02-19T10:26:48.137004635Z"
+    created: "2025-02-19T10:46:10.342063311Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -55,7 +55,7 @@ entries:
   crazy360:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.142580815Z"
+    created: "2025-02-19T10:46:10.348945061Z"
     description: An Amaze360 Hospital Themed 360 Game
     digest: 38629f33b1eaf72556e2d84f8b49a152b80d126ad7f13ed59082336f46e079a8
     name: crazy360
@@ -65,7 +65,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.142191734Z"
+    created: "2025-02-19T10:46:10.34840141Z"
     description: An Amaze360 Hospital Themed 360 Game
     digest: ebd2dc02476b5b3168e2c3d2bafa0dea47c50e1a377e4930618d47721659de5e
     name: crazy360
@@ -75,7 +75,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.141833441Z"
+    created: "2025-02-19T10:46:10.347913173Z"
     description: An Amaze360 Hospital Themed 360 Game
     digest: b42b4a36f0bc9df34c55aa500207095845e6e640cf9a8fff9da2069907ecb015
     name: crazy360
@@ -85,7 +85,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.141491969Z"
+    created: "2025-02-19T10:46:10.347372117Z"
     description: An Amaze360 Hospital Themed 360 Game
     digest: 6a42123f580fbf9a0132d41578313f5603cac66b1481b87b8e829dfeb90c8631
     name: crazy360
@@ -96,7 +96,7 @@ entries:
   game-repo:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.143081687Z"
+    created: "2025-02-19T10:46:10.349398303Z"
     description: A Helm chart for Kubernetes
     digest: 1412bc034cbe916ce6d2c52be69e4af9da73b0b1325ed7360dd5baf9125234a0
     name: game-repo
@@ -107,7 +107,7 @@ entries:
   opas-fortuin:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.144948024Z"
+    created: "2025-02-19T10:46:10.351292781Z"
     description: A 360 Adventure game about a family that moved from TThe Dutch East
       Indies to the Netherlands after WOII.
     digest: 0947d7a389a16b6fb2a6bdc30fa3793e83d0da3e0a38a0ad98aca4cec573f8ab
@@ -118,7 +118,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.14445629Z"
+    created: "2025-02-19T10:46:10.350755021Z"
     description: A 360 Adventure game about a family that moved from Indonesia to
       the Netherlands after WOII.
     digest: 8f1845dd8be5d69fc51884e427c230046bf8de8691123dfe3f23f5f90ad2a17c
@@ -129,7 +129,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.144014129Z"
+    created: "2025-02-19T10:46:10.350235645Z"
     description: A 360 Adventure game about a family that moved from Indonesia to
       the Netherlands after WOII.
     digest: 648e707c8782c2e4b2dafcebde8f36da34e52a1614a507a66fea249d7996d01d
@@ -140,7 +140,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.143526282Z"
+    created: "2025-02-19T10:46:10.3498228Z"
     description: A 360 Adventure game about a family that moved from Indonesia to
       the Netherlands after WOII.
     digest: 4108def4938aca531210caf9b5d5b3a7540c8c839f1a244ec4ff85ccc6e0478a
@@ -152,7 +152,7 @@ entries:
   pages360:
   - apiVersion: v2
     appVersion: gl-pages
-    created: "2025-02-19T10:26:48.14848505Z"
+    created: "2025-02-19T10:46:10.354647992Z"
     description: A Helm chart for Kubernetes
     digest: f51025fe270ac1cb998b34ab15305559dc269d1b8e1b9e18fc2d949fa784db84
     name: pages360
@@ -162,7 +162,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: pages360
-    created: "2025-02-19T10:26:48.147357092Z"
+    created: "2025-02-19T10:46:10.354122746Z"
     description: A Helm chart for Kubernetes
     digest: 1dc4304db5d8496086bfadfa24c8321e09615e99ade9607485766f07a2e767c3
     name: pages360
@@ -172,7 +172,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: pages360
-    created: "2025-02-19T10:26:48.14664866Z"
+    created: "2025-02-19T10:46:10.353593953Z"
     description: A Helm chart for Kubernetes
     digest: 8e972d11b906357ae6e007aab4e8530422e7dae6145f6fd2aadc986aba7e7ed4
     name: pages360
@@ -182,7 +182,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: pages360
-    created: "2025-02-19T10:26:48.146300456Z"
+    created: "2025-02-19T10:46:10.35304969Z"
     description: A Helm chart for Kubernetes
     digest: 9f5dd03e588263feea9c288c87e5db21c0c21b95a862e23f2724314e3a7ba894
     name: pages360
@@ -192,7 +192,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: pages360
-    created: "2025-02-19T10:26:48.145947793Z"
+    created: "2025-02-19T10:46:10.352459722Z"
     description: A Helm chart for Kubernetes
     digest: 6a03415e8fad092f28d670f0d66ce6cdc9973fff7b15ddfae499882e47b32006
     name: pages360
@@ -202,7 +202,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: pages360
-    created: "2025-02-19T10:26:48.145573971Z"
+    created: "2025-02-19T10:46:10.351863994Z"
     description: A Helm chart for Kubernetes
     digest: cea190420c59d22549b47f5928da1cab072366db5545a88d5b1987bd94e91799
     name: pages360
@@ -213,7 +213,17 @@ entries:
   panorama-server:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.15431177Z"
+    created: "2025-02-19T10:46:10.364590454Z"
+    description: Creates and serves 360 panoramas
+    digest: c92a4b3e96d6bc9fdaac1357ddf01f8bfbc19e60122c45c5e6e55211e7d05e06
+    name: panorama-server
+    type: application
+    urls:
+    - https://amaze360.github.io/helm/panorama-server-0.1.14.tgz
+    version: 0.1.14
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-02-19T10:46:10.36402957Z"
     description: Creates and serves 360 panoramas
     digest: e13a954499e7b97417b670e2788b894dd4be48875a32f6163c961c0bbd5c9ef8
     name: panorama-server
@@ -223,7 +233,7 @@ entries:
     version: 0.1.13
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.153838741Z"
+    created: "2025-02-19T10:46:10.363474758Z"
     description: Creates and serves 360 panoramas
     digest: c2b4ffef3e95d1a469197159a4976617402b187d36d544c606b6ba592ca8c033
     name: panorama-server
@@ -233,7 +243,7 @@ entries:
     version: 0.1.12
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.153427058Z"
+    created: "2025-02-19T10:46:10.362844925Z"
     description: Creates and serves 360 panoramas
     digest: 584737426dc02e7d73a668950049a5abe41ca848880cb7d5db2ae2de383bb94c
     name: panorama-server
@@ -243,7 +253,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.153014122Z"
+    created: "2025-02-19T10:46:10.362277089Z"
     description: Creates and serves 360 panoramas
     digest: 35b3a0a68ac427b42c6783c420a56da49692746296f85e7ed99493b75f08f370
     name: panorama-server
@@ -253,7 +263,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.159427607Z"
+    created: "2025-02-19T10:46:10.369555166Z"
     description: Creates and serves 360 panoramas
     digest: 48fa2576147462695cc86db4e73a5d6f0233eed0c8596d623779125f27e323c3
     name: panorama-server
@@ -263,7 +273,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.15901441Z"
+    created: "2025-02-19T10:46:10.369053164Z"
     description: Creates and serves 360 panoramas
     digest: 37cee6253e70b950a31f20bf5c1fe31cfc844abc79aad0cef82f9868f7b64699
     name: panorama-server
@@ -273,7 +283,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.158574133Z"
+    created: "2025-02-19T10:46:10.367982194Z"
     description: Creates and serves 360 panoramas
     digest: ef9fbac5f0074393d5b6c1ddae0ada8462f67afc094d604efdb625f03f7d8740
     name: panorama-server
@@ -283,7 +293,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.158170274Z"
+    created: "2025-02-19T10:46:10.367148939Z"
     description: Creates and serves 360 panoramas
     digest: 3e3db57a0c6b0a8cf6ca22f2774c3ee1fe41640f1518fbee9b42ed4cbcf82f7a
     name: panorama-server
@@ -293,7 +303,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: "32"
-    created: "2025-02-19T10:26:48.157725648Z"
+    created: "2025-02-19T10:46:10.366608173Z"
     description: Creates and serves 360 panoramas
     digest: d704997639083b2a51e4fcf7e4504441a4ac67dc4e21c113759fa083008ae967
     name: panorama-server
@@ -303,7 +313,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: "30"
-    created: "2025-02-19T10:26:48.157255254Z"
+    created: "2025-02-19T10:46:10.366134815Z"
     description: Creates and serves 360 public
     digest: 1ddc9d45c2f6ada8a08dabde58488741873db2f1060925ed93756e8fd32b0754
     name: panorama-server
@@ -313,7 +323,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: "30"
-    created: "2025-02-19T10:26:48.156543456Z"
+    created: "2025-02-19T10:46:10.365607654Z"
     description: Creates and serves 360 public
     digest: 3abe47ad6a459a5090026b98b96b96242944ff87abefd3432c29ff53bd2c8612
     name: panorama-server
@@ -323,7 +333,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: "30"
-    created: "2025-02-19T10:26:48.155573543Z"
+    created: "2025-02-19T10:46:10.365152219Z"
     description: Creates and serves 360 public
     digest: 4de40f0f3cea46d671e0a4e370489402ac8366bd472b4460fa19c8b7d6828839
     name: panorama-server
@@ -333,7 +343,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: "29"
-    created: "2025-02-19T10:26:48.15257695Z"
+    created: "2025-02-19T10:46:10.361512483Z"
     description: Creates and serves 360 public
     digest: 5e42e0fb90353444eeec815017f601a94945f5c444c0555ba36c0cfbbf68e92f
     name: panorama-server
@@ -343,7 +353,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.15217783Z"
+    created: "2025-02-19T10:46:10.360975815Z"
     description: Creates and serves 360 public
     digest: 6c60cd67a4e376a228d84638b2af89507b1d474c41c2627bee0920075330bb37
     name: panorama-server
@@ -353,7 +363,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.151816832Z"
+    created: "2025-02-19T10:46:10.360473431Z"
     description: Creates and serves 360 public
     digest: b8916c1aea1688bc33ecb2326b695db32e1208159e54188e0855ff80bc18d922
     name: panorama-server
@@ -363,7 +373,7 @@ entries:
     version: 0.0.9
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.151454551Z"
+    created: "2025-02-19T10:46:10.359573962Z"
     description: Creates and serves 360 Panoramas
     digest: 80a6367b0e74bedac2e5475d60a24feac8068247908648991bb45f156c2f9d7b
     name: panorama-server
@@ -373,7 +383,7 @@ entries:
     version: 0.0.8
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.151087671Z"
+    created: "2025-02-19T10:46:10.358539541Z"
     description: Creates and serves 360 Panoramas
     digest: e22e405b6545b82183222a8b5d64532638aa389ccda499ad527e51c4bb5dd021
     name: panorama-server
@@ -383,7 +393,7 @@ entries:
     version: 0.0.7
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.150710442Z"
+    created: "2025-02-19T10:46:10.357874913Z"
     description: Creates and serves 360 Panoramas
     digest: 218802e7991099e902e5d2846e6fcd2063185e2b2473e74a1d40caeb35095850
     name: panorama-server
@@ -393,7 +403,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.150323966Z"
+    created: "2025-02-19T10:46:10.35730365Z"
     description: Creates and serves 360 Panoramas
     digest: efe3b9e68f88620dec6f7ce94b385bb970e06a6cf15d6bee5c6c4821ad79d8f9
     name: panorama-server
@@ -403,7 +413,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.1499587Z"
+    created: "2025-02-19T10:46:10.356727177Z"
     description: Creates and serves 360 Panoramas
     digest: 94ca1d520093455acd6da083a4870dd1f9679ae8a71bbe2cb7f89bb0898c2052
     name: panorama-server
@@ -413,7 +423,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.149594926Z"
+    created: "2025-02-19T10:46:10.356086875Z"
     description: Creates and serves 360 Panoramas
     digest: 12ec4749353610fecce600c67a16dce775725cc23b5a2cfb6dc41c9e2864c92c
     name: panorama-server
@@ -423,7 +433,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: "23"
-    created: "2025-02-19T10:26:48.149242033Z"
+    created: "2025-02-19T10:46:10.355552531Z"
     description: Creates and serves 360 Panoramas
     digest: 680e678ed9ea725437052941cb89085dbe5eb32ce1b32faf41b420de8982a973
     name: panorama-server
@@ -433,7 +443,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.2.0-rc0
-    created: "2025-02-19T10:26:48.148899679Z"
+    created: "2025-02-19T10:46:10.355139375Z"
     description: Creates and serves 360 Panoramas
     digest: a4fcb020e7f896a9b114454c12364b96e314ab952d8c9be46beeecade5e9f899
     name: panorama-server
@@ -444,7 +454,7 @@ entries:
   portal360:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.159747117Z"
+    created: "2025-02-19T10:46:10.370033304Z"
     description: A Helm chart for Kubernetes
     digest: d71f17549c75db9efd1682c12d47421c332538a42ab2d0f3a550b23b500e3662
     name: portal360
@@ -455,7 +465,7 @@ entries:
   sdg-game:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.161360089Z"
+    created: "2025-02-19T10:46:10.372188642Z"
     description: Online escape room about sustainability
     digest: 5cad9b0469000cf0e229b5a7cdbbfc92a003302cb8ae4314fe3014c914857367
     name: sdg-game
@@ -465,7 +475,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: "142"
-    created: "2025-02-19T10:26:48.161015622Z"
+    created: "2025-02-19T10:46:10.371685557Z"
     description: Online escape room about sustainability
     digest: 5780b5dda28422c91d6e6da91d2706ce8113756762eb5d8a8f9fca275610bdeb
     name: sdg-game
@@ -475,7 +485,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: "140"
-    created: "2025-02-19T10:26:48.160695881Z"
+    created: "2025-02-19T10:46:10.371285817Z"
     description: Online escape room about sustainability
     digest: b2360bc4d7143fa6590682e63ca2f2fe3746f18898be0cfd6289baec925f066c
     name: sdg-game
@@ -485,7 +495,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: "140"
-    created: "2025-02-19T10:26:48.160376661Z"
+    created: "2025-02-19T10:46:10.370883381Z"
     description: Online escape room about sustainability
     digest: 60f6987e0b422a1bd439e62e464cfbc1c9fc473a9f0682ba5fa37ac7f742e425
     name: sdg-game
@@ -495,7 +505,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.2.0-rc0
-    created: "2025-02-19T10:26:48.160059424Z"
+    created: "2025-02-19T10:46:10.370425912Z"
     description: Online escape room about sustainability
     digest: b7a96355f312a93125049c5e4406a52b0b8533d7571e10532e9cc1765d5fe1aa
     name: sdg-game
@@ -506,7 +516,7 @@ entries:
   socketio:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-02-19T10:26:48.161971909Z"
+    created: "2025-02-19T10:46:10.373168823Z"
     description: A Helm chart for Kubernetes
     digest: 4a12263161a515da919652799a234223cc66b6d579127391fb8f5363231676cd
     name: socketio
@@ -516,7 +526,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: "1"
-    created: "2025-02-19T10:26:48.161667397Z"
+    created: "2025-02-19T10:46:10.372670628Z"
     description: A Helm chart for Kubernetes
     digest: 6bc7335fa508835bde65ef825d80fbb6f7ff8a7dcb7f0efb732f157757d797b3
     name: socketio
@@ -524,4 +534,4 @@ entries:
     urls:
     - https://amaze360.github.io/helm/socketio-0.0.1.tgz
     version: 0.0.1
-generated: "2025-02-19T10:26:48.131654831Z"
+generated: "2025-02-19T10:46:10.337184537Z"
