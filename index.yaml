@@ -3,43 +3,43 @@ entries:
   admin360:
   - apiVersion: v2
     appVersion: latest
-    created: "2024-06-04T09:05:37.169269746Z"
+    created: "2025-02-19T10:26:48.132512703Z"
     description: A Helm chart for Kubernetes
-    digest: 9b70ee6af05b62d61518770cea11dab59167611f07c2dd13e2e9d96a703d9f7b
+    digest: 1518a4edff424dc7e8bbf9cefc208da44d945a2fa7a100a1bca75919bd147854
     name: admin360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/admin360-0.0.2.tgz
+    - https://amaze360.github.io/helm/admin360-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: "19"
-    created: "2024-06-04T09:05:37.168986332Z"
+    created: "2025-02-19T10:26:48.132152146Z"
     description: A Helm chart for Kubernetes
     digest: 2022c61108815e8fb30f0e2c4eedad6edf443f184737b59be7517bd7a4756e1f
     name: admin360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/admin360-0.0.1.tgz
+    - https://amaze360.github.io/helm/admin360-0.0.1.tgz
     version: 0.0.1
   api360:
   - apiVersion: v2
     appVersion: "12"
-    created: "2024-06-04T09:05:37.175150141Z"
+    created: "2025-02-19T10:26:48.141145568Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
       repository: https://charts.bitnami.com/bitnami
       version: 10.1.*
     description: A Helm chart for Kubernetes
-    digest: 55f555e43fc43b5c31d10e44cebf46fd743dab49d0921c84acd8b917d686ec1d
+    digest: a3385083a7681e6a2500cccfb7f527f03f551addb871f6cdf46ebd01c0800f10
     name: api360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/api360-0.1.3.tgz
+    - https://amaze360.github.io/helm/api360-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
     appVersion: "12"
-    created: "2024-06-04T09:05:37.172346029Z"
+    created: "2025-02-19T10:26:48.137004635Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -50,478 +50,478 @@ entries:
     name: api360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/api360-0.1.2.tgz
+    - https://amaze360.github.io/helm/api360-0.1.2.tgz
     version: 0.1.2
   crazy360:
   - apiVersion: v2
     appVersion: latest
-    created: "2024-06-04T09:05:37.177023484Z"
+    created: "2025-02-19T10:26:48.142580815Z"
     description: An Amaze360 Hospital Themed 360 Game
-    digest: 0c06dcbe95dd9442afd131ebef7621b01b5ffa6d9590fa31cb9cb838b1f1f44a
+    digest: 38629f33b1eaf72556e2d84f8b49a152b80d126ad7f13ed59082336f46e079a8
     name: crazy360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/crazy360-0.0.4.tgz
+    - https://amaze360.github.io/helm/crazy360-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.176676933Z"
+    created: "2025-02-19T10:26:48.142191734Z"
     description: An Amaze360 Hospital Themed 360 Game
     digest: ebd2dc02476b5b3168e2c3d2bafa0dea47c50e1a377e4930618d47721659de5e
     name: crazy360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/crazy360-0.0.3.tgz
+    - https://amaze360.github.io/helm/crazy360-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.176347564Z"
+    created: "2025-02-19T10:26:48.141833441Z"
     description: An Amaze360 Hospital Themed 360 Game
     digest: b42b4a36f0bc9df34c55aa500207095845e6e640cf9a8fff9da2069907ecb015
     name: crazy360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/crazy360-0.0.2.tgz
+    - https://amaze360.github.io/helm/crazy360-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.176007648Z"
+    created: "2025-02-19T10:26:48.141491969Z"
     description: An Amaze360 Hospital Themed 360 Game
     digest: 6a42123f580fbf9a0132d41578313f5603cac66b1481b87b8e829dfeb90c8631
     name: crazy360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/crazy360-0.0.1.tgz
+    - https://amaze360.github.io/helm/crazy360-0.0.1.tgz
     version: 0.0.1
   game-repo:
   - apiVersion: v2
     appVersion: latest
-    created: "2024-06-04T09:05:37.177300194Z"
+    created: "2025-02-19T10:26:48.143081687Z"
     description: A Helm chart for Kubernetes
-    digest: 7b89d864db6e09dacb0c387396321bcfa240ff7767cf8ccca19cb5e466048836
+    digest: 1412bc034cbe916ce6d2c52be69e4af9da73b0b1325ed7360dd5baf9125234a0
     name: game-repo
     type: application
     urls:
-    - https://helm.services.amaze360.nl/game-repo-0.0.1.tgz
+    - https://amaze360.github.io/helm/game-repo-0.0.1.tgz
     version: 0.0.1
   opas-fortuin:
   - apiVersion: v2
     appVersion: latest
-    created: "2024-06-04T09:05:37.178399071Z"
+    created: "2025-02-19T10:26:48.144948024Z"
     description: A 360 Adventure game about a family that moved from TThe Dutch East
       Indies to the Netherlands after WOII.
-    digest: 4495a2727466f1b1d73d045829d1045a4decae1c6536341a63a1a9871103318b
+    digest: 0947d7a389a16b6fb2a6bdc30fa3793e83d0da3e0a38a0ad98aca4cec573f8ab
     name: opas-fortuin
     type: application
     urls:
-    - https://helm.services.amaze360.nl/opas-fortuin-0.0.4.tgz
+    - https://amaze360.github.io/helm/opas-fortuin-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.178150158Z"
+    created: "2025-02-19T10:26:48.14445629Z"
     description: A 360 Adventure game about a family that moved from Indonesia to
       the Netherlands after WOII.
     digest: 8f1845dd8be5d69fc51884e427c230046bf8de8691123dfe3f23f5f90ad2a17c
     name: opas-fortuin
     type: application
     urls:
-    - https://helm.services.amaze360.nl/opas-fortuin-0.0.3.tgz
+    - https://amaze360.github.io/helm/opas-fortuin-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.177913118Z"
+    created: "2025-02-19T10:26:48.144014129Z"
     description: A 360 Adventure game about a family that moved from Indonesia to
       the Netherlands after WOII.
     digest: 648e707c8782c2e4b2dafcebde8f36da34e52a1614a507a66fea249d7996d01d
     name: opas-fortuin
     type: application
     urls:
-    - https://helm.services.amaze360.nl/opas-fortuin-0.0.2.tgz
+    - https://amaze360.github.io/helm/opas-fortuin-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.177655963Z"
+    created: "2025-02-19T10:26:48.143526282Z"
     description: A 360 Adventure game about a family that moved from Indonesia to
       the Netherlands after WOII.
     digest: 4108def4938aca531210caf9b5d5b3a7540c8c839f1a244ec4ff85ccc6e0478a
     name: opas-fortuin
     type: application
     urls:
-    - https://helm.services.amaze360.nl/opas-fortuin-0.0.1.tgz
+    - https://amaze360.github.io/helm/opas-fortuin-0.0.1.tgz
     version: 0.0.1
   pages360:
   - apiVersion: v2
     appVersion: gl-pages
-    created: "2024-06-04T09:05:37.179888358Z"
+    created: "2025-02-19T10:26:48.14848505Z"
     description: A Helm chart for Kubernetes
     digest: f51025fe270ac1cb998b34ab15305559dc269d1b8e1b9e18fc2d949fa784db84
     name: pages360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/pages360-0.0.6.tgz
+    - https://amaze360.github.io/helm/pages360-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: pages360
-    created: "2024-06-04T09:05:37.179645871Z"
+    created: "2025-02-19T10:26:48.147357092Z"
     description: A Helm chart for Kubernetes
-    digest: 14583f1ce0e42f05a8b5580f87fe51099e31a07f25c85c71a89ab2b896c9a56a
+    digest: 1dc4304db5d8496086bfadfa24c8321e09615e99ade9607485766f07a2e767c3
     name: pages360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/pages360-0.0.5.tgz
+    - https://amaze360.github.io/helm/pages360-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: pages360
-    created: "2024-06-04T09:05:37.17940038Z"
+    created: "2025-02-19T10:26:48.14664866Z"
     description: A Helm chart for Kubernetes
     digest: 8e972d11b906357ae6e007aab4e8530422e7dae6145f6fd2aadc986aba7e7ed4
     name: pages360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/pages360-0.0.4.tgz
+    - https://amaze360.github.io/helm/pages360-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: pages360
-    created: "2024-06-04T09:05:37.179139803Z"
+    created: "2025-02-19T10:26:48.146300456Z"
     description: A Helm chart for Kubernetes
     digest: 9f5dd03e588263feea9c288c87e5db21c0c21b95a862e23f2724314e3a7ba894
     name: pages360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/pages360-0.0.3.tgz
+    - https://amaze360.github.io/helm/pages360-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: pages360
-    created: "2024-06-04T09:05:37.178894382Z"
+    created: "2025-02-19T10:26:48.145947793Z"
     description: A Helm chart for Kubernetes
     digest: 6a03415e8fad092f28d670f0d66ce6cdc9973fff7b15ddfae499882e47b32006
     name: pages360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/pages360-0.0.2.tgz
+    - https://amaze360.github.io/helm/pages360-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: pages360
-    created: "2024-06-04T09:05:37.17864959Z"
+    created: "2025-02-19T10:26:48.145573971Z"
     description: A Helm chart for Kubernetes
     digest: cea190420c59d22549b47f5928da1cab072366db5545a88d5b1987bd94e91799
     name: pages360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/pages360-0.0.1.tgz
+    - https://amaze360.github.io/helm/pages360-0.0.1.tgz
     version: 0.0.1
   panorama-server:
   - apiVersion: v2
     appVersion: latest
-    created: "2024-06-04T09:05:37.185607211Z"
+    created: "2025-02-19T10:26:48.15431177Z"
     description: Creates and serves 360 panoramas
-    digest: 16c871ab9d4e2c0dbac1bacb951890ce419ac74d3cd806c2aabe5b06e4dcbb87
+    digest: e13a954499e7b97417b670e2788b894dd4be48875a32f6163c961c0bbd5c9ef8
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.13.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.13.tgz
     version: 0.1.13
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.185237404Z"
+    created: "2025-02-19T10:26:48.153838741Z"
     description: Creates and serves 360 panoramas
     digest: c2b4ffef3e95d1a469197159a4976617402b187d36d544c606b6ba592ca8c033
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.12.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.12.tgz
     version: 0.1.12
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.184763184Z"
+    created: "2025-02-19T10:26:48.153427058Z"
     description: Creates and serves 360 panoramas
     digest: 584737426dc02e7d73a668950049a5abe41ca848880cb7d5db2ae2de383bb94c
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.11.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.11.tgz
     version: 0.1.11
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.184288545Z"
+    created: "2025-02-19T10:26:48.153014122Z"
     description: Creates and serves 360 panoramas
     digest: 35b3a0a68ac427b42c6783c420a56da49692746296f85e7ed99493b75f08f370
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.10.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.10.tgz
     version: 0.1.10
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.188972496Z"
+    created: "2025-02-19T10:26:48.159427607Z"
     description: Creates and serves 360 panoramas
     digest: 48fa2576147462695cc86db4e73a5d6f0233eed0c8596d623779125f27e323c3
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.9.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.9.tgz
     version: 0.1.9
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.188256137Z"
+    created: "2025-02-19T10:26:48.15901441Z"
     description: Creates and serves 360 panoramas
     digest: 37cee6253e70b950a31f20bf5c1fe31cfc844abc79aad0cef82f9868f7b64699
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.8.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.8.tgz
     version: 0.1.8
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.187898761Z"
+    created: "2025-02-19T10:26:48.158574133Z"
     description: Creates and serves 360 panoramas
     digest: ef9fbac5f0074393d5b6c1ddae0ada8462f67afc094d604efdb625f03f7d8740
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.7.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.7.tgz
     version: 0.1.7
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.187536287Z"
+    created: "2025-02-19T10:26:48.158170274Z"
     description: Creates and serves 360 panoramas
     digest: 3e3db57a0c6b0a8cf6ca22f2774c3ee1fe41640f1518fbee9b42ed4cbcf82f7a
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.6.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.6.tgz
     version: 0.1.6
   - apiVersion: v2
     appVersion: "32"
-    created: "2024-06-04T09:05:37.187114308Z"
+    created: "2025-02-19T10:26:48.157725648Z"
     description: Creates and serves 360 panoramas
     digest: d704997639083b2a51e4fcf7e4504441a4ac67dc4e21c113759fa083008ae967
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.5.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.5.tgz
     version: 0.1.5
   - apiVersion: v2
     appVersion: "30"
-    created: "2024-06-04T09:05:37.186745897Z"
+    created: "2025-02-19T10:26:48.157255254Z"
     description: Creates and serves 360 public
     digest: 1ddc9d45c2f6ada8a08dabde58488741873db2f1060925ed93756e8fd32b0754
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.4.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.4.tgz
     version: 0.1.4
   - apiVersion: v2
     appVersion: "30"
-    created: "2024-06-04T09:05:37.186328668Z"
+    created: "2025-02-19T10:26:48.156543456Z"
     description: Creates and serves 360 public
     digest: 3abe47ad6a459a5090026b98b96b96242944ff87abefd3432c29ff53bd2c8612
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.3.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
     appVersion: "30"
-    created: "2024-06-04T09:05:37.185957114Z"
+    created: "2025-02-19T10:26:48.155573543Z"
     description: Creates and serves 360 public
     digest: 4de40f0f3cea46d671e0a4e370489402ac8366bd472b4460fa19c8b7d6828839
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.2.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: "29"
-    created: "2024-06-04T09:05:37.183748535Z"
+    created: "2025-02-19T10:26:48.15257695Z"
     description: Creates and serves 360 public
     digest: 5e42e0fb90353444eeec815017f601a94945f5c444c0555ba36c0cfbbf68e92f
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.1.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.183323623Z"
+    created: "2025-02-19T10:26:48.15217783Z"
     description: Creates and serves 360 public
     digest: 6c60cd67a4e376a228d84638b2af89507b1d474c41c2627bee0920075330bb37
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.1.0.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.182874057Z"
+    created: "2025-02-19T10:26:48.151816832Z"
     description: Creates and serves 360 public
     digest: b8916c1aea1688bc33ecb2326b695db32e1208159e54188e0855ff80bc18d922
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.9.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.9.tgz
     version: 0.0.9
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.18252576Z"
+    created: "2025-02-19T10:26:48.151454551Z"
     description: Creates and serves 360 Panoramas
     digest: 80a6367b0e74bedac2e5475d60a24feac8068247908648991bb45f156c2f9d7b
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.8.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.8.tgz
     version: 0.0.8
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.182163356Z"
+    created: "2025-02-19T10:26:48.151087671Z"
     description: Creates and serves 360 Panoramas
     digest: e22e405b6545b82183222a8b5d64532638aa389ccda499ad527e51c4bb5dd021
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.7.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.7.tgz
     version: 0.0.7
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.181779371Z"
+    created: "2025-02-19T10:26:48.150710442Z"
     description: Creates and serves 360 Panoramas
     digest: 218802e7991099e902e5d2846e6fcd2063185e2b2473e74a1d40caeb35095850
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.6.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.181096047Z"
+    created: "2025-02-19T10:26:48.150323966Z"
     description: Creates and serves 360 Panoramas
     digest: efe3b9e68f88620dec6f7ce94b385bb970e06a6cf15d6bee5c6c4821ad79d8f9
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.5.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.180838683Z"
+    created: "2025-02-19T10:26:48.1499587Z"
     description: Creates and serves 360 Panoramas
     digest: 94ca1d520093455acd6da083a4870dd1f9679ae8a71bbe2cb7f89bb0898c2052
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.4.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.180585859Z"
+    created: "2025-02-19T10:26:48.149594926Z"
     description: Creates and serves 360 Panoramas
     digest: 12ec4749353610fecce600c67a16dce775725cc23b5a2cfb6dc41c9e2864c92c
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.3.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: "23"
-    created: "2024-06-04T09:05:37.180345118Z"
+    created: "2025-02-19T10:26:48.149242033Z"
     description: Creates and serves 360 Panoramas
     digest: 680e678ed9ea725437052941cb89085dbe5eb32ce1b32faf41b420de8982a973
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.2.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.2.0-rc0
-    created: "2024-06-04T09:05:37.180122325Z"
+    created: "2025-02-19T10:26:48.148899679Z"
     description: Creates and serves 360 Panoramas
     digest: a4fcb020e7f896a9b114454c12364b96e314ab952d8c9be46beeecade5e9f899
     name: panorama-server
     type: application
     urls:
-    - https://helm.services.amaze360.nl/panorama-server-0.0.1.tgz
+    - https://amaze360.github.io/helm/panorama-server-0.0.1.tgz
     version: 0.0.1
   portal360:
   - apiVersion: v2
-    appVersion: "42"
-    created: "2024-06-04T09:05:37.189548334Z"
+    appVersion: latest
+    created: "2025-02-19T10:26:48.159747117Z"
     description: A Helm chart for Kubernetes
-    digest: 7ed11d9844a00daba7837b58d7d4baf5015a9ed18e5607bc849896a442a98f80
+    digest: d71f17549c75db9efd1682c12d47421c332538a42ab2d0f3a550b23b500e3662
     name: portal360
     type: application
     urls:
-    - https://helm.services.amaze360.nl/portal360-0.0.1.tgz
+    - https://amaze360.github.io/helm/portal360-0.0.1.tgz
     version: 0.0.1
   sdg-game:
   - apiVersion: v2
     appVersion: latest
-    created: "2024-06-04T09:05:37.191101526Z"
+    created: "2025-02-19T10:26:48.161360089Z"
     description: Online escape room about sustainability
-    digest: 77ce6d3b406557153df8b8580e04bddd3e04b8136bbcbfdc05614e2c57718c66
+    digest: 5cad9b0469000cf0e229b5a7cdbbfc92a003302cb8ae4314fe3014c914857367
     name: sdg-game
     type: application
     urls:
-    - https://helm.services.amaze360.nl/sdg-game-0.0.5.tgz
+    - https://amaze360.github.io/helm/sdg-game-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: "142"
-    created: "2024-06-04T09:05:37.190803864Z"
+    created: "2025-02-19T10:26:48.161015622Z"
     description: Online escape room about sustainability
     digest: 5780b5dda28422c91d6e6da91d2706ce8113756762eb5d8a8f9fca275610bdeb
     name: sdg-game
     type: application
     urls:
-    - https://helm.services.amaze360.nl/sdg-game-0.0.4.tgz
+    - https://amaze360.github.io/helm/sdg-game-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: "140"
-    created: "2024-06-04T09:05:37.190519332Z"
+    created: "2025-02-19T10:26:48.160695881Z"
     description: Online escape room about sustainability
     digest: b2360bc4d7143fa6590682e63ca2f2fe3746f18898be0cfd6289baec925f066c
     name: sdg-game
     type: application
     urls:
-    - https://helm.services.amaze360.nl/sdg-game-0.0.3.tgz
+    - https://amaze360.github.io/helm/sdg-game-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: "140"
-    created: "2024-06-04T09:05:37.190219854Z"
+    created: "2025-02-19T10:26:48.160376661Z"
     description: Online escape room about sustainability
     digest: 60f6987e0b422a1bd439e62e464cfbc1c9fc473a9f0682ba5fa37ac7f742e425
     name: sdg-game
     type: application
     urls:
-    - https://helm.services.amaze360.nl/sdg-game-0.0.2.tgz
+    - https://amaze360.github.io/helm/sdg-game-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.2.0-rc0
-    created: "2024-06-04T09:05:37.189891532Z"
+    created: "2025-02-19T10:26:48.160059424Z"
     description: Online escape room about sustainability
     digest: b7a96355f312a93125049c5e4406a52b0b8533d7571e10532e9cc1765d5fe1aa
     name: sdg-game
     type: application
     urls:
-    - https://helm.services.amaze360.nl/sdg-game-0.0.1.tgz
+    - https://amaze360.github.io/helm/sdg-game-0.0.1.tgz
     version: 0.0.1
   socketio:
   - apiVersion: v2
-    appVersion: "1"
-    created: "2024-06-04T09:05:37.191827452Z"
+    appVersion: latest
+    created: "2025-02-19T10:26:48.161971909Z"
     description: A Helm chart for Kubernetes
-    digest: 20102103276fccb1d830b841b70ebdca28224873572d77ab5c478c0033e3b974
+    digest: 4a12263161a515da919652799a234223cc66b6d579127391fb8f5363231676cd
     name: socketio
     type: application
     urls:
-    - https://helm.services.amaze360.nl/socketio-0.0.2.tgz
+    - https://amaze360.github.io/helm/socketio-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: "1"
-    created: "2024-06-04T09:05:37.191487048Z"
+    created: "2025-02-19T10:26:48.161667397Z"
     description: A Helm chart for Kubernetes
     digest: 6bc7335fa508835bde65ef825d80fbb6f7ff8a7dcb7f0efb732f157757d797b3
     name: socketio
     type: application
     urls:
-    - https://helm.services.amaze360.nl/socketio-0.0.1.tgz
+    - https://amaze360.github.io/helm/socketio-0.0.1.tgz
     version: 0.0.1
-generated: "2024-06-04T09:05:37.168636569Z"
+generated: "2025-02-19T10:26:48.131654831Z"
