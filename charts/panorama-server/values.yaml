@@ -67,14 +67,14 @@ persistence:
     # storageClass: "-"
     # existingClaim: panorama-server-data
     accessMode: ReadWriteOnce
-    size: 5Gi
+    size: 3Gi
     annotations: {}
   panoramas:
     enabled: false
     # storageClass: "-"
     # existingClaim: panorama-server-panoramas
     accessMode: ReadWriteOnce
-    size: 30Gi
+    size: 75Gi
     annotations: {}
 
 livenessProbe:
